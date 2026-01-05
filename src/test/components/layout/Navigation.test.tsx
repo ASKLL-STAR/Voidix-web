@@ -128,7 +128,7 @@ describe('Navigation', () => {
     // 点击桌面端的状态页链接（第一个）- 现在是外部链接
     const statusLinks = screen.getAllByText('状态页');
     fireEvent.click(statusLinks[0]);
-    expect(mockLocationSetter).toHaveBeenCalledWith('https://status.voidix.net/');
+    expect(mockLocationSetter).toHaveBeenCalledWith('/status');
 
     // 点击常见问题
     const faqLinks = screen.getAllByText('常见问题');
@@ -194,11 +194,11 @@ describe('Navigation', () => {
       </BrowserRouter>
     );
 
-    const desktopNavLinks = container.querySelectorAll('.hidden.md\\:flex button');
+    const desktopNavLinks = container.querySelectorAll('.hidden.lg\\:flex button');
     expect(desktopNavLinks[0]).toHaveClass(
       'text-gray-300',
       'hover:text-white',
-      'px-3',
+      'px-2',
       'py-2',
       'rounded-md',
       'text-sm',

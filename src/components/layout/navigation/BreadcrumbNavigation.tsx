@@ -36,11 +36,11 @@ export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({
     // 路径映射
     const pathMap: Record<string, string> = {
       status: '服务器状态',
-      monitor: '监控系统',
       faq: '常见问题',
       'bug-report': 'Bug反馈',
       privacy: '隐私政策',
       'ban-history': '封禁查询',
+      issue: 'Issue系统',
     };
 
     let currentPath = '';
